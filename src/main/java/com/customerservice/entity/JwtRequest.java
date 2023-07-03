@@ -6,7 +6,7 @@ public class JwtRequest {
 
 	public JwtRequest() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public JwtRequest(String username, String password) {

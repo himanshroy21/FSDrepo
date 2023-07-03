@@ -1,6 +1,6 @@
 package com.customerservice.Controller;
 
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,13 +30,9 @@ public class CustomerController {
 
 	@GetMapping("/getall")
 	public List<Customer> getAllCustomers() {
-		// List<Customer> textList="this is private page,this page is not allowed to
-		// unauthenticated users ";
-		// text+="this page is not allowed to unauthenticated users";
-		// return text;
-
+		
 		return this.customerService.getAllCustomers();
-		// return this.customerService.
+		
 
 	}
 

@@ -1,12 +1,9 @@
 package com.customerservice.service;
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
 import com.customerservice.dao.CustomerDAO;
 import com.customerservice.entity.Customer;
 import com.customerservice.exception.CustomerNotFoundException;
@@ -23,7 +20,6 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public List<Customer> getAllCustomers() {
 		return customerDao.findAll();
-
 	}
 
 	@Override
@@ -41,14 +37,12 @@ public class CustomerServiceImpl implements CustomerService {
 	public Customer addCustomer(Customer customer) {
 		customer.setPassword(bCryptPasswordEncoder.encode(customer.getPassword()));
 		return customerDao.save(customer);
-
 	}
 
 	@Override
 	public Customer updateCustomer(Customer customer) {
 		customerDao.save(customer);
 		return customer;
-
 	}
 
 	@Override
